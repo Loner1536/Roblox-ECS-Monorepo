@@ -1,0 +1,76 @@
+{
+	"name": "template-place",
+	"emitLegacyScripts": false,
+	"globIgnorePaths": [
+		"**/jest.config.luau/**",
+		"**/tsconfig.json/**",
+		"**/.gitkeep/**",
+		"**/tests/**"
+	],
+	"tree": {
+		"$className": "DataModel",
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"TS_Server": {
+				"$path": "out/template/src/server"
+			},
+			"TS_Shared_Server": {
+				"$path": "out/shared/src/server"
+			}
+		},
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"rbxts_include": {
+				"$path": "out/include",
+				"node_modules": {
+					"$className": "Folder",
+					"@rbxts": {
+						"$path": "node_modules/@rbxts"
+					},
+					"@flamework": {
+						"$path": "node_modules/@flamework"
+					}
+				}
+			},
+
+			"TS_Shared_Client": {
+				"$path": "out/shared/src/client"
+			},
+			"TS_Client": {
+				"$path": "out/template/src/client"
+			},
+
+			"TS": {
+				"$path": "out/template/src/shared"
+			},
+			"TS_Shared": {
+				"$path": "out/shared/src/shared"
+			}
+		},
+		"Workspace": {
+			"$className": "Workspace",
+			"$properties": {
+				"FilteringEnabled": true
+			},
+			"LobbySpawns": {
+				"$className": "Folder"
+			},
+			"QueuePads": {
+				"$className": "Folder"
+			}
+		},
+		"HttpService": {
+			"$className": "HttpService",
+			"$properties": {
+				"HttpEnabled": true
+			}
+		},
+		"SoundService": {
+			"$className": "SoundService",
+			"$properties": {
+				"RespectFilteringEnabled": true
+			}
+		}
+	}
+}

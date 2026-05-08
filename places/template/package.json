@@ -1,0 +1,13 @@
+{
+	"name": "template-game",
+	"version": "0.0.1",
+	"scripts": {
+		"compile": "rbxtsc -p ./tsconfig.build.json -i ./out/include",
+		"build": "rojo build ./default.project.json -o ./release.rbxlx",
+		"dev": "concurrently \"rbxtsc -w -p ./tsconfig.build.json -i ./out/include\" \"rojo serve .\"",
+		"link": "cd ../../ && bun i && rm -rf ./places/template/node_modules && ln -s ../../node_modules ./places/template/node_modules",
+
+		"sync": "asphalt sync",
+		"sync:studio": "asphalt sync --target studio"
+	}
+}

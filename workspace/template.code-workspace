@@ -1,0 +1,120 @@
+{
+    "folders": [
+        {
+            "name": "Template",
+            "path": "../places/template"
+        },
+        {
+            "name": "Shared",
+            "path": "../places/shared"
+        }
+    ],
+    "settings": {
+        "terminal.integrated.cwd": "${workspaceFolder:Template}/../..",
+
+        "files.exclude": {
+            "**/release.rbxlx": true,
+            "**/flamework.*": true,
+            "**/*-lock.*": true,
+            "**/*.lock": true,
+
+            "**/patches": true,
+            "**/.turbo": true,
+
+            "**/node_modules": true,
+            "**/out": true,
+
+            ".gitattributes": true,
+            ".gitignore": true
+        }
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Link",
+                "command": "bun run link",
+                "group": "build",
+                "type": "shell",
+                "options": {
+                    "cwd": "${workspaceFolder:Template}"
+                },
+                "presentation": {
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "dedicated"
+                }
+            },
+            {
+                "label": "Build",
+                "command": "bun x turbo run build",
+                "group": "build",
+                "type": "shell",
+                "options": {
+                    "cwd": "${workspaceFolder:Template}/../.."
+                },
+                "presentation": {
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "dedicated"
+                }
+            },
+            {
+                "label": "Compile",
+                "command": "bun x turbo run compile",
+                "group": "build",
+                "type": "shell",
+                "options": {
+                    "cwd": "${workspaceFolder:Template}/../.."
+                },
+                "presentation": {
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "dedicated"
+                }
+            },
+            {
+                "label": "Dev",
+                "command": "bun x turbo run dev",
+                "group": "build",
+                "type": "shell",
+                "options": {
+                    "cwd": "${workspaceFolder:Template}/../.."
+                },
+                "presentation": {
+                    "echo": false,
+                    "reveal": "always",
+                    "panel": "dedicated"
+                }
+            },
+            {
+                "label": "Sync",
+                "command": "asphalt sync",
+                "group": "build",
+                "type": "shell",
+                "options": {
+                    "cwd": "${workspaceFolder:Template}/../.."
+                },
+                "presentation": {
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "dedicated"
+                }
+            },
+            {
+                "label": "Sync (Studio)",
+                "command": "asphalt sync studio",
+                "group": "build",
+                "type": "shell",
+                "options": {
+                    "cwd": "${workspaceFolder:Template}/../.."
+                },
+                "presentation": {
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "dedicated"
+                }
+            }
+        ]
+    }
+}

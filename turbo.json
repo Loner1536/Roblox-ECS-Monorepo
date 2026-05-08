@@ -1,0 +1,17 @@
+{
+	"tasks": {
+		"build": {
+			"outputs": ["*.rbxlx"],
+			"cache": true
+		},
+		"compile": {
+			"outputs": ["out/**/*"],
+			"inputs": ["src/**/*"],
+			"cache": true
+		},
+		"dev": {
+			"persistent": true,
+			"cache": false
+		}
+	}
+}

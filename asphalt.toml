@@ -1,0 +1,12 @@
+[creator]
+type = "group"
+id = 282353581
+
+[codegen]
+output_name = "Asphalt"
+strip_extensions = true
+typescript = true
+
+[inputs.assets]
+path = "assets/asphalt/**"
+output_path = "places/shared/src/shared/asset"

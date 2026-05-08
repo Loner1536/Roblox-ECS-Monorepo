@@ -1,0 +1,19 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"typeRoots": [
+			"node_modules/@rbxts",
+			"node_modules/@flamework",
+			"../../node_modules/@rbxts",
+			"../../node_modules/@flamework"
+		],
+		"paths": {
+			"@global/*": ["../shared/src/*"],
+			"@shared/*": ["src/shared/*"],
+			"@client/*": ["src/client/*"],
+			"@server/*": ["src/server/*"]
+		}
+	},
+	"include": ["src/**/*", "../shared/src/**/*"]
+}
