@@ -9,6 +9,6 @@
 		"**/.turbo": true,
 
 		".gitattributes": true,
-		".gitignore": false
+		".gitignore": true
 	}
 }
